@@ -6,9 +6,9 @@ from django.utils import timezone
 from django.db import models
 
 class Blog(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=255)
     content = models.TextField(max_length=10000)
-    cover_image = models.FileField(upload_to='mentee/', null=True, verbose_name="")
+    cover_image = models.FileField(upload_to='blog/', null=True, verbose_name="")
     posted_at = models.DateTimeField(default=timezone.now)
     posted_by = models.CharField(max_length=50)
     comment_count = models.IntegerField()

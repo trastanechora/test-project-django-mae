@@ -4,3 +4,5 @@ __pycache__
 db.sqlite3
 .DS_Store
 python anywhere e
+
+# pa_autoconfigure_django.py https://github.com/trastanechora/test-project-django-mae

@@ -6,24 +6,22 @@
 {% endblock %}
 
 {% block content %}
-{% for blog in blogs %}
 <div class="row content-item">
     <div class="ful-width">
-        <img src="{{ blog.cover_image.url }}" alt="" class="blog">
+        <img src="{{ content.cover_image.url }}" alt="" class="blog">
     </div>
     <div class="ful-width tag">
-        <div><p>{{ blog.posted_at }}</p></div>
-        <div><p>Comment {{ blog.comment_count }}</p></div>
+        <div><p>{{ content.posted_at }}</p></div>
+        <div><p>Comment {{ content.comment_count }}</p></div>
     </div>
     <div class="ful-width">
-        <h1>{{ blog.title }}</h1>
+        <h1>{{ content.title }}</h1>
     </div>
     <div class="ful-width">
-        <p>{{ blog.content }}</p>
+        <p>{{ content.content }}</p>
     </div>
     <div class="ful-width">
-        <a href="{% url 'post_description' requested_id=blog.id%}">Baca Selengkapnya</a>
+        <a href="{% url 'blog' %}">Back</a>
     </div>
 </div>
-{% endfor %}
 {% endblock %}
